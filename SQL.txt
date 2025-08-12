@@ -10,4 +10,3 @@
 
 6) SELECT * FROM STUDENTS ;
 
-https://github.com/Hrithik-kc/assignment-1.git

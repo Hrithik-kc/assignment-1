@@ -10,68 +10,79 @@
  { id: 9, name: "Rajesh Khanna", age: 21, course: "Electronics", marks: 70, feesPaid: false },
  { id: 10, name: "Sneha Kapoor", age: 22, course: "Civil Engineering", marks: 90, feesPaid: true }
  ];
-// MAP Questions
-// let body=students.map((el)=>el=el.name);
-// console.log(body);
+// MAP Question
+let body=students.map((el)=>el=el.name);
+console.log(body);
 
-// let b=students.map((el)=>el={name:el.name,course:el.course});
-// console.log(b);
+let h=students.map((el)=>el={name:el.name,course:el.course});
+console.log(h);
 
-// let d=students.map((el)=>{
-//  if(el.marks>=60)
-//     {
-//     el.status="Pass";
-//     }
-// else
-//     {
-//     el.status="Fail";
-//    }
-//    return el;
-// });
-// console.log(d);
+let d=students.map((el)=>{
+ if(el.marks>=60)
+    {
+    el.status="Pass";
+    }
+else
+    {
+    el.status="Fail";
+   }
+   return el;
+});
+console.log(d);
 
-// let b=students.map((el)=>{
-//       el={name:el.name ,course:el.course}
-//       console.log(el.name, "-" ,el.course);
-// });
+let b=students.map((el)=>{
+      el={name:el.name ,course:el.course}
+      console.log(el.name, "-" ,el.course);
+});
 
-// let e=students.map((el)=>el={name:el.name ,mark:el.marks+5});
-// console.log(d);
+let e=students.map((el)=>el={name:el.name ,mark:el.marks+5});
+console.log(d);
 
 // Filter   Questions
-//  let f=students.filter((el)=> el>=el.course="computer science");
-// console.log(d);
+ let f=students.filter((el)=> el>=el.course==="computer science");
+console.log(d);
 
-// let comp=students.filter((el)=>el.course==="Computer Science");
-// console.log(comp);
+let comp=students.filter((el)=>el.course==="Computer Science");
+console.log(comp);
     
-//  let mar=students.filter((el)=>el.marks>=80);
-// console.log(mar);
+ let mar=students.filter((el)=>el.marks>=80);
+console.log(mar);
 
-//  let fee=students.filter((el)=>el.feesPaid===false);
-// console.log(fee);
+ let fee=students.filter((el)=>el.feesPaid===false);
+console.log(fee);
 
-//  let age=students.filter((el)=>el.marks>=70 && el.age>=20);
-//  console.log(age);
+ let age=students.filter((el)=>el.marks>=70 && el.age>=20);
+ console.log(age);
 
-//  let bran=students.filter((el)=>el.marks<=85 && el.course==="Mechanical" );
-//  console.log(bran);
+ let bran=students.filter((el)=>el.marks<=85 && el.course==="Mechanical" );
+ console.log(bran);
 
 // Reduce Question
 
-//  const total=students.map((el)=>marks=el.marks).reduce((el, ui)=>ui=el+ui);
-//  console.log(total);
+ const total=students.map((el)=>marks=el.marks).reduce((el, ui)=>ui=el+ui);
+ console.log(total);
 
-// const total=students.map((el)=>marks=el.marks).reduce((el, ui)=>ui=(el+ui));
-//  console.log(total/10);
+const av=students.map((el)=>marks=el.marks).reduce((el, ui)=>ui=(el+ui));
+ console.log(av/10);
 
-// const count=students.map((el)=>fees=el.feesPaid).reduce((el, ui)=>ui=el+ui);
-//  console.log(count);
+const count=students.map((el)=>fees=el.feesPaid).reduce((el, ui)=>ui=el+ui);
+ console.log(count);
 
-// const high = students.map((bl)=>marks=bl.marks).reduce((bl,ui)=>{
-// if(ui>bl) {
-//     bl=ui; 
-// }
-//     return bl;
-// });
-// console.log(high);
+const high = students.map((bl)=>marks=bl.marks).reduce((bl,ui)=>{
+if(ui>bl) {
+    bl=ui; 
+}
+    return bl;
+});
+console.log(high);
+
+const group = students.reduce((acc, zl) => {
+    if (!acc[zl.course]) {
+        acc[zl.course] = [zl.name]; 
+    } else {
+        acc[zl.course][acc[zl.course].length] = zl.name; 
+    }
+    return acc;
+}, {});
+
+console.log(group);
